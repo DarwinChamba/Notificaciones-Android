@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AgendaNotas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="crear_recordatorio">Agrega recordatorios de forma simple y efectiva</string>
+    <string name="crear_titulo">Ingresa un titulo</string>
+    <string name="guardar_recordatorio">Guardar Recordatorio</string>
+    <string name="crear_description">Ingresa una descripción</string>
+    <string name="crear_fechahoraRecordatorio">Selecciona la feccha y hora del recordatoio</string>
+    <string name="crear_hora">Seleccionar Hora</string>
+    <string name="crear_fecha">Seleccionar Fecha</string>
+    <string name="crear_descriptionfab">Boton para agregar recordatorios</string>
+    <string name="dialogo_hint">Ingresa un tarea</string>
+    <string name="dialogo_tareas">Agregar tareas</string>
+    <string name="dialogo_guardarTarea">Guardar Tarea</string>
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.view.fragment.CrearFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@id/tvSelector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_recordatoriottile"
+                android:drawablePadding="10dp"
+                android:hint="@string/crear_titulo"
+                android:imeOptions="actionDone"
+                android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/tvSelector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/a"
+            android:textColor="@color/white"
+            android:background="@drawable/back_3"
+            android:text="@string/crear_fechahoraRecordatorio"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hora"
+            android:background="@drawable/back_2"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvSelector"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="160dp"
+            android:layout_marginVertical="20dp"
+            android:layout_height="wrap_content"
+            android:text="Selecionar Hora"/>
+        <TextView
+            android:id="@+id/tvhora"
+            android:layout_width="wrap_content"
+            android:text="Hora NO seleccionada"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            app:layout_constraintTop_toTopOf="@id/hora"
+            app:layout_constraintStart_toEndOf="@id/hora"
+            app:layout_constraintTop_toBottomOf="@id/tvSelector"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvtimeSelected"
+            android:layout_width="wrap_content"
+            android:text="hora "
+            android:visibility="gone"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintStart_toEndOf="@id/hora"
+            app:layout_constraintTop_toBottomOf="@id/tvhora"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fecha"
+            android:background="@drawable/back_2"
+            android:paddingHorizontal="3dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/hora"
+            app:layout_constraintBottom_toTopOf="@id/b"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="160dp"
+            android:layout_marginVertical="20dp"
+            android:layout_height="wrap_content"
+            android:text="@string/crear_fecha"/>
+
+        <TextView
+            android:id="@+id/tvfecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha NO seleccionada"
+            android:layout_marginStart="25dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/fecha"
+           app:layout_constraintStart_toEndOf="@id/fecha"
+            />
+
+        <TextView
+            android:id="@+id/tvdateSeleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:visibility="gone"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvfecha"
+            app:layout_constraintStart_toEndOf="@id/fecha"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/b"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/fecha"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintBottom_toTopOf="@id/guardarNotas"
+            android:layout_height="0dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:hint="Ingresa un descripción"
+                android:gravity="start|left"
+                android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences|textMultiLine"
+                android:padding="16dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/guardarNotas"
+            android:layout_width="match_parent"
+            android:text="Guadar notas"
+            android:background="@drawable/back_3"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/b"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

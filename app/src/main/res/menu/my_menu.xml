@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/listaFragment2"
+        android:title="Lista de  Recordatorios"
+        android:icon="@drawable/ic_list"/>
+    <item android:id="@+id/crearFragment2"
+    android:title="Crear Recordatorios"
+    android:icon="@drawable/ic_addnote"/>
+
+
+</menu>
